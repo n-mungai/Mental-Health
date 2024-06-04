@@ -1,0 +1,63 @@
+body{
+    background: #00FFD1;
+    height: auto;
+}
+#tulia {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 140px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+#catchphrase {
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-size: 37px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 0;
+  margin-top: 0;
+  /* text-transform: uppercase; */
+}
+.landingPage{
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+#myNav{
+    width: 64em;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    /* text-align:right; */
+    position: relative;
+}
+#myNav a {
+    color: #636363; /* this is grey */
+  }
+#myNav ul{
+    list-style: none;
+}
+#myNav ul li {
+    display: inline-block;
+    margin: 0 0.35em;
+    padding: 0;
+    vertical-align: middle;
+}
+#myNav ul li a {
+    display: inline-block;
+    height: 2.25em;
+    line-height: 2.25em;
+    padding: 0 1.25em;
+    border: 0;
+    /* box-shadow: inset 0 0 0 1px transparent; */
+    text-decoration: none;
+  }
