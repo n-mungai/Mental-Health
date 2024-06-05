@@ -1,0 +1,56 @@
+/* 
+    Root stylesheet for all pages to use.
+    Contains CSS rules for the navigtion bar and body of the page.
+
+    NOTE: Add CSS for any repeating elements in all pages here, eg the nav bar, header, footer, etc...
+*/
+
+
+/* Set global font family and margins */
+* {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Navigation bar CSS */
+#myNav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    transition: background-color 0.4 ease-in-out;
+}
+
+#myNav a {
+    /* this is grey */
+    color: #636363;
+
+    line-height: 3em;
+    padding: 0 1.25em;
+    border: 0;
+    /* box-shadow: inset 0 0 0 1px transparent; */
+    text-decoration: none;
+
+    transition: 0.4s ease-in-out;
+}
+
+#myNav a:hover {
+    background-color: #000;
+    color: #fffbf0;
+}
+
+#myNav.scrolled {
+    background-color: #000;
+}
+
+#myNav.scrolled a {
+    color: #fffbf0;
+}
+
+#myNav.scrolled a:hover {
+    color: #000;
+    background-color: #fffbf0;
+}
+/* ==================================== */
