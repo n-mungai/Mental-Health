@@ -5,6 +5,15 @@
     NOTE: Add CSS for any repeating elements in all pages here, eg the nav bar, header, footer, etc...
 */
 
+/* Contant variables and color themes. */
+:root {
+    /* Primary color */
+    --primary-color: #fffbf0;
+    /* Secondary color */
+    --secondary-color: #000;
+    /* Backgrounf color */
+    --background-color: #26a69a;
+}
 
 /* Set global font family and margins */
 * {
@@ -32,7 +41,7 @@
 
 #myNav a {
     /* this is grey */
-    color: #fffbf0;
+    color: var(--primary-color);
 
     line-height: 3em;
     padding: 0 1.25em;
@@ -45,17 +54,17 @@
 }
 
 #myNav a:hover {
-    color: #000;
-    background-color: #fffbf0;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
 }
 
 #myNav.scrolled a {
-    color: #000;
+    color: var(--secondary-color);
 }
 
 #myNav.scrolled a:hover {
-    color: #fffbf0;
-    background-color: #000;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
 }
 
 /* ==================================== */

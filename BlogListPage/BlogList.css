@@ -1,5 +1,5 @@
 body {
-    background: #26a69aff;
+    background: var(--background-color);
     height: auto;
 }
 
@@ -18,8 +18,8 @@ body {
     background-image: url("../assets/images/blog_title_background.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
-    background-color: #26a69aff;
-    mask-image: linear-gradient(#ffffffff, #26a69a00);
+    background-color: var(--background-color);
+    mask-image: linear-gradient(#ffffffff, #ffffff00);
 
     filter: blur(2px);
     -webkit-filter: blur(2px);
@@ -27,7 +27,7 @@ body {
 }
 
 #blogTitle {
-    color: #fffbf0;
+    color: var(--primary-color);
     font-size: 125px;
     font-style: normal;
     font-weight: 400;
@@ -36,7 +36,7 @@ body {
 }
 
 #catchphrase {
-    color: #fffbf0;
+    color: var(--primary-color);
     font-size: 37px;
     font-style: normal;
     font-weight: 200;
@@ -51,7 +51,7 @@ body {
 
 .blogItem {
     width: 75vw;
-    background-color: #fffbf08f;
+    background-color: rgba(var(--primary-color, 0.5));
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
 }
