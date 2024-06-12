@@ -49,4 +49,13 @@
     background-color: #fffbf0;
 }
 
+#myNav.scrolled a {
+    color: #000;
+}
+
+#myNav.scrolled a:hover {
+    color: #fffbf0;
+    background-color: #000;
+}
+
 /* ==================================== */

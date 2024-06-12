@@ -6,3 +6,14 @@
  * 
  * NOTE: Make sure to include it at the end of the html file.
  */
+
+// Event listener for changing the nav bar colors when scrolling.
+document.addEventListener('scroll', () => {
+    const navbar = document.getElementById("myNav");
+
+    if (window.scrollY >= window.innerHeight) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+})
