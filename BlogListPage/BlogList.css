@@ -70,6 +70,17 @@ body {
     -webkit-backdrop-filter: blur(3px);
 
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+
+    transition: all 0.35s ease-in-out;
+}
+
+.blogItem:hover {
+    scale: 1.02;
+    translate: 30px 0px;
+}
+
+.blogItemLeft:hover {
+    translate: -30px 0px;
 }
 
 .blogItem .blogItemImage {

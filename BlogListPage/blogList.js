@@ -14,6 +14,9 @@ function createBlogListItem(data, shift) {
 
     const blogItem = document.createElement("div");
     blogItem.classList.add("blogItem");
+    if (shift) {
+        blogItem.classList.add("blogItemLeft")
+    }
     blogItem.insertAdjacentHTML('beforeend', '<img class="blogItemImage" src="../assets/img1.jpg"></img>');
     blogItem.insertAdjacentHTML('beforeend',
         '<div class="blogItemBody"> \
@@ -34,7 +37,7 @@ async function main() {
     let i = 0;
     for (let key of Object.keys(data)) {
         console.log(i);
-        blogList.appendChild(createBlogListItem(data[key], i%2 == 1));
+        blogList.appendChild(createBlogListItem(data[key], i % 2 == 1));
         i++;
     }
 }
