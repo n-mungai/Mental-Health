@@ -43,6 +43,8 @@
     /* this is grey */
     color: var(--background-color);
 
+    font-size: 1.15em;
+
     line-height: 3em;
     padding: 0 1.25em;
     border: 0;
@@ -70,6 +72,18 @@
 #myNav a.account {
     position: absolute;
     right: 0;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    border-top: 3px solid var(--secondary-color);
+}
+
+footer p {
+    padding: 20px 30px;
 }
 
 /* ==================================== */
