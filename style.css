@@ -8,11 +8,11 @@
 /* Contant variables and color themes. */
 :root {
     /* Primary color */
-    --primary-color: #fffbf0;
+    --background-color: #fffbf0;
     /* Secondary color */
     --secondary-color: #000;
     /* Backgrounf color */
-    --background-color: #26a69a;
+    --primary-color: #26a69a;
 }
 
 /* Set global font family and margins */
@@ -41,7 +41,7 @@
 
 #myNav a {
     /* this is grey */
-    color: var(--primary-color);
+    color: var(--background-color);
 
     line-height: 3em;
     padding: 0 1.25em;
@@ -55,7 +55,7 @@
 
 #myNav a:hover {
     color: var(--secondary-color);
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
 }
 
 #myNav.scrolled a {
@@ -63,8 +63,13 @@
 }
 
 #myNav.scrolled a:hover {
-    color: var(--primary-color);
+    color: var(--background-color);
     background-color: var(--secondary-color);
+}
+
+#myNav a.account {
+    position: absolute;
+    right: 0;
 }
 
 /* ==================================== */

@@ -13,21 +13,28 @@ body {
 
 #titleBackground {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     position: absolute;
     background-image: url("../assets/images/blog_title_background.jpg");
-    background-size: 100%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-color: var(--background-color);
-    mask-image: linear-gradient(#ffffffff, #ffffff00);
 
     filter: blur(2px);
     -webkit-filter: blur(2px);
     z-index: -1;
 }
 
+#titleBackgroundFade {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background-color: var(--primary-color);
+    mask-image: linear-gradient(#ffffff00, #ffffffff);
+}
+
 #blogTitle {
-    color: var(--primary-color);
+    color: var(--background-color);
     font-size: 125px;
     font-style: normal;
     font-weight: 400;
@@ -36,22 +43,47 @@ body {
 }
 
 #catchphrase {
-    color: var(--primary-color);
+    color: var(--background-color);
     font-size: 37px;
     font-style: normal;
     font-weight: 200;
     line-height: 0;
-    /* text-transform: uppercase; */
 }
 
 .blogListItem {
-    height: 50vh;
     display: flex;
 }
 
 .blogItem {
-    width: 75vw;
-    background-color: rgba(var(--primary-color, 0.5));
+    width: 70vw;
+    height: 30vh;
+    margin: 48px 24px;
+
+    display: flex;
+
+    /* border: 4px solid var(--secondary-color); */
+    border-radius: 16px;
+    overflow: hidden;
+
+    background-color: color-mix(in srgb, var(--background-color) 50%, transparent);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
+
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+}
+
+.blogItem .blogItemImage {
+    width: 30%
+}
+
+.blogItem .blogItemBody {
+    width: 70%;
+    margin: 1%;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.blogItem .blogItemBody h3 {
+    font-size: 1.75em;
 }
