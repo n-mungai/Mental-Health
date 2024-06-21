@@ -33,8 +33,7 @@
   align-items: center;
 }
 
-.about {
-  /* height: 100vh; */
+.getToKnowTulia {
   background: var(--background-color);
   display: inline-block;
 }
@@ -96,4 +95,7 @@ center {
   box-sizing: border-box;
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
+}
+.outerContainer{
+  margin-top: 8%;
 }
