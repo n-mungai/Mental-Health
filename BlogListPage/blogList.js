@@ -17,7 +17,7 @@ function createBlogListItem(data, shift) {
     if (shift) {
         blogItem.classList.add("blogItemLeft")
     }
-    blogItem.insertAdjacentHTML('beforeend', '<img class="blogItemImage" src="../assets/img1.jpg"></img>');
+    blogItem.insertAdjacentHTML('beforeend', '<img class="blogItemImage" src="../assets/images/img1.jpg"></img>');
     blogItem.insertAdjacentHTML('beforeend',
         '<div class="blogItemBody"> \
             <h3>' + data.title + '</h3> \
