@@ -11,11 +11,11 @@ body {
     align-items: center;
 }
 
-#titleBackground {
+.blogTitle #titleBackground {
     height: 100vh;
     width: 100%;
     position: absolute;
-    background-image: url("../assets/images/blog_title_background.jpg");
+    background-image: url("../../assets/blogsPage/blog_title_background.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 

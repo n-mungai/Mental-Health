@@ -1,8 +1,10 @@
 /* CSS for the landing page. */
-
-#homePage {
-  width: 100%;
+.landingPage {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: var(--primary-color);
 }
 
@@ -23,14 +25,6 @@
   font-weight: 200;
   line-height: 0;
   /* text-transform: uppercase; */
-}
-
-.landingPage {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .getToKnowTulia {
@@ -96,6 +90,7 @@ center {
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
-.outerContainer{
+
+.outerContainer {
   margin-top: 8%;
 }

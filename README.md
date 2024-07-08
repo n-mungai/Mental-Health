@@ -10,6 +10,3 @@ The website consists of four main pages:
 2. Blog list page - shows a list of available blogs to read, contained in `BlogListPage/blogList.html`, done by Junaid Chaudhry - 166335
 3. Find experts page - shows a list of available experts to get in touch with, contained in `Experts/experts.html`, done by Billy Kibet
 4. Account page - if a user is signed in, this page shows the list of blogs they have written recently, contained in the `UserDetails/userDetails.html`, done by Kahindo
-
-## Note for running the website
-The website needs to be run on a live server in order to work.
