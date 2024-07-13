@@ -1,0 +1,55 @@
+/* Navigation bar CSS */
+#myNav {
+    width: 100%;
+
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    transition: background-color 0.4 ease-in-out;
+}
+
+#myNav .content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#myNav a {
+    /* this is grey */
+    color: var(--background-color);
+
+    font-size: 1.15em;
+
+    line-height: 3em;
+    padding: 0 1.25em;
+    border: 0;
+    text-decoration: none;
+    position: relative;
+
+    transition: 0.4s ease-in-out;
+}
+
+#myNav a:hover {
+    color: var(--secondary-color);
+    background-color: var(--background-color);
+}
+
+#myNav.scrolled a {
+    color: var(--secondary-color);
+}
+
+#myNav.scrolled a:hover {
+    color: var(--background-color);
+    background-color: var(--secondary-color);
+}
+
+#myNav a.account {
+    position: absolute;
+    right: 0;
+}

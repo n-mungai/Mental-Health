@@ -2,7 +2,7 @@ body {
     background-color: var(--background-color);
 }
 
-.blogTitle {
+.expertsTitle {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -10,11 +10,11 @@ body {
     align-items: center;
 }
 
-#titleBackground {
+.expertsTitle #titleBackground {
     height: 100vh;
     width: 100%;
     position: absolute;
-    background-image: url("../assets/experts_background.jpg");
+    background-image: url("../../assets/expertsPage/experts_background.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 
@@ -68,10 +68,4 @@ body {
 
 .expertBody {
     padding: 5% 2%;
-}
-
-#navbar {
-    background-color: aquamarine;
-    padding: 2px;
-    margin: -5px;
 }
