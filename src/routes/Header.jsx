@@ -62,6 +62,7 @@ const Header = () => {
                 <HashLink to="/#landingPage">{home}</HashLink>
             </div>
             <div className="content">
+                <HashLink to="blogDetails">BLOG DETAILS</HashLink>
                 <HashLink to="blogs">BLOG POSTS</HashLink>
                 <HashLink to="experts">SEE EXPERTS</HashLink>
             </div>
