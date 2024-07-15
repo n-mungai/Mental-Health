@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 
 /old
+
+package-lock.json
