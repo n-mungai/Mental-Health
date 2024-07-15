@@ -4,7 +4,7 @@ import img2 from '../../assets/landingPage/img2.jpg';
 
 const LandingPage = () => {
     return (
-        <>
+        <div id="landingPage">
             <div className="landingPage">
                 <p id="tulia">TULIA</p>
                 <p className="catchphrase">BE AWARE {"\u2022"} GET HELP</p>
@@ -68,7 +68,7 @@ const LandingPage = () => {
                     </div>
                 </div>
             </section>
-        </>
+        </div>
     )
 }
 
