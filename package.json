@@ -10,8 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "markdown-to-jsx": "^7.4.7",
+    "md-block": "^0.0.1",
+    "mdb-react-ui-kit": "^8.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-markdown": "^9.0.1",
     "react-router-dom": "^6.24.1",
     "react-router-hash-link": "^2.4.3"
   },

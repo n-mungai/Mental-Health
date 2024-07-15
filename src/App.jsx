@@ -5,6 +5,7 @@ import LandingPage from './routes/landingPage/LandingPage'
 import Footer from './routes/Footer'
 import BlogsPage from './routes/blogsPage/BlogsPage'
 import ExpertsPage from './routes/expertsPage/ExpertsPage'
+import BlogDetails from './routes/blogDetailsPage/BlogDetails'
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "experts",
         element: <ExpertsPage />
+      },
+      {
+        path: "blogDetails",
+        element: <BlogDetails />
       }
     ]
   },
@@ -33,7 +38,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <RouterProvider router={router}/>
   )
 }
 
