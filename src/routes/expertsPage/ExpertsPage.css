@@ -1,0 +1,71 @@
+body {
+    background-color: var(--background-color);
+}
+
+.expertsTitle {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.expertsTitle #titleBackground {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-image: url("../../assets/expertsPage/experts_background.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    z-index: -1;
+}
+
+#titleBackgroundFade {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background-color: var(--primary-color);
+    mask-image: linear-gradient(#ffffff00, #ffffffff);
+}
+
+#expertsTitle {
+    color: var(--background-color);
+    font-size: 125px;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+#catchphrase {
+    color: var(--background-color);
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 0;
+}
+
+#main {
+    padding: 2.5%;
+}
+
+.expert_tile {
+    display: flex;
+    margin: 50px 0;
+    padding: 20px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+    border-radius: 55px;
+}
+
+.m {
+    width: 20vw;
+    border-radius: 35px;
+}
+
+.expertBody {
+    padding: 5% 2%;
+}
