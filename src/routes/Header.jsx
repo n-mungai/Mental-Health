@@ -9,9 +9,12 @@ import accountDark from "../assets/header/account-dark.png";
 import '../firebase-options';
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
+import "firebase/compat/database";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { ref, update } from "firebase/database";
 
 const auth = firebase.auth();
+const database = firebase.database();
 
 const Header = () => {
     const [scrollStyle, setScrollStyle] = useState("");
@@ -50,6 +53,25 @@ const Header = () => {
         });
     }
 
+
+    const createUser = () => {
+        auth.createUserWithEmailAndPassword(email, password).catch(function (error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            if (errorCode == 'auth/weak-password') {
+                alert('The password is too weak.');
+            } else {
+                alert(errorMessage);
+            }
+        }).then((userCredential) => {
+            var user = userCredential.user;
+            setHidden(true);
+            alert("Created new user!");
+            window.location.reload();
+        })
+    }
+
     const signOut = () => {
         auth.signOut();
         setHidden(true);
@@ -76,6 +98,7 @@ const Header = () => {
                                     <input type="text" id="email" value={email} onChange={e => { setEmail(e.target.value); }}></input>
                                     <input type="password" id="password" value={password} onChange={e => { setPassword(e.target.value); }}></input>
                                     <button onClick={signIn}>Sign In</button>
+                                    <button onClick={createUser}>Create New Account</button>
                                 </> :
                                 <>
                                     <button onClick={signOut}>Sign out</button>

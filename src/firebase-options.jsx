@@ -10,12 +10,11 @@ const firebaseConfig = {
   projectId: "mental-health-32799",
   storageBucket: "mental-health-32799.appspot.com",
   messagingSenderId: "679049696270",
-  appId: "1:679049696270:web:4fc2ef3f3e41e4c42e985f"
+  appId: "1:679049696270:web:4fc2ef3f3e41e4c42e985f",
+  databaseURL: "https://mental-health-32799-default-rtdb.firebaseio.com"
 };
 
 // Initialize Firebase
 const app = firebase.initializeApp(firebaseConfig);
 
-console.log("Login");
-
-export default { app };
+export { app };
