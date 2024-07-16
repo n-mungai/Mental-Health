@@ -22,7 +22,13 @@ const router = createBrowserRouter([
       },
       {
         path: "blogs",
-        element: <BlogsPage />
+        element: <BlogsPage />,
+        children: [
+          {
+            path: ":blogId",
+            element: <BlogDetails />
+          }
+        ]
       },
       {
         path: "experts",
@@ -38,7 +44,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   )
 }
 
