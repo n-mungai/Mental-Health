@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.blogsTitle {
+    text-align: center;
+    background-color: #009688;
+    padding: 50px 0;
+    color: #ffffff;
+}
+
+#titleBackground {
+    background-color: #009688;
+    height: 200px;
+}
+
+#titleBackgroundFade {
+    background: linear-gradient(to bottom, #009688, #ffffff);
+    height: 50px;
+}
+
+#blogsTitle {
+    font-size: 36px;
+    margin: 0;
+}
+
+#catchphrase {
+    font-size: 18px;
+    margin: 0;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.addBlogContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    width: 80%;
+    max-width: 600px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+}
+
+input[type="file"] {
+    margin-bottom: 10px;
+}
+
+.buttonsContainer {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #009688;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #00796b;
+}
+
+.draftsContainer, .blogsContainer {
+    width: 80%;
+    max-width: 600px;
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.draftsContainer h2, .blogsContainer h2 {
+    margin-top: 0;
+}
+
+.noDraftsMessage, .noBlogsMessage {
+    text-align: center;
+    font-size: 20px;
+    color: #777;
+}
+
+.draft, .blog {
+    background-color: #f5f5f5;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    position: relative;
+}
+
+.draft button, .blog button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff4444;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.draft button:hover, .blog button:hover {
+    background-color: #cc0000;
+}
+
+.filePreview img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
