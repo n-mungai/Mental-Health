@@ -1,0 +1,136 @@
+{
+  "hash": "29a99f5b",
+  "configHash": "a546336d",
+  "lockfileHash": "ddf98c16",
+  "browserHash": "e3cc89b5",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "9916a10b",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "8e9c57f6",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "9e0e4267",
+      "needsInterop": false
+    },
+    "react-router-hash-link": {
+      "src": "../../node_modules/react-router-hash-link/dist/react-router-hash-link.esm.js",
+      "file": "react-router-hash-link.js",
+      "fileHash": "a4c16e22",
+      "needsInterop": false
+    },
+    "firebase/compat/app": {
+      "src": "../../node_modules/firebase/compat/app/dist/esm/index.esm.js",
+      "file": "firebase_compat_app.js",
+      "fileHash": "33673bde",
+      "needsInterop": false
+    },
+    "firebase/compat/auth": {
+      "src": "../../node_modules/firebase/compat/auth/dist/esm/index.esm.js",
+      "file": "firebase_compat_auth.js",
+      "fileHash": "fabdca3e",
+      "needsInterop": false
+    },
+    "react-firebase-hooks/auth": {
+      "src": "../../node_modules/react-firebase-hooks/auth/dist/index.esm.js",
+      "file": "react-firebase-hooks_auth.js",
+      "fileHash": "63d4308f",
+      "needsInterop": false
+    },
+    "react-markdown": {
+      "src": "../../node_modules/react-markdown/index.js",
+      "file": "react-markdown.js",
+      "fileHash": "7aab2c7d",
+      "needsInterop": false
+    },
+    "firebase/compat/database": {
+      "src": "../../node_modules/firebase/compat/database/dist/esm/index.esm.js",
+      "file": "firebase_compat_database.js",
+      "fileHash": "1c7214e1",
+      "needsInterop": false
+    },
+    "firebase/database": {
+      "src": "../../node_modules/firebase/database/dist/esm/index.esm.js",
+      "file": "firebase_database.js",
+      "fileHash": "7f649fa2",
+      "needsInterop": false
+    },
+    "firebase/storage": {
+      "src": "../../node_modules/firebase/storage/dist/esm/index.esm.js",
+      "file": "firebase_storage.js",
+      "fileHash": "b656b6cc",
+      "needsInterop": false
+    },
+    "firebase/compat/storage": {
+      "src": "../../node_modules/firebase/compat/storage/dist/esm/index.esm.js",
+      "file": "firebase_compat_storage.js",
+      "fileHash": "8105f718",
+      "needsInterop": false
+    },
+    "react-firebase-hooks/storage": {
+      "src": "../../node_modules/react-firebase-hooks/storage/dist/index.esm.js",
+      "file": "react-firebase-hooks_storage.js",
+      "fileHash": "18c0607f",
+      "needsInterop": false
+    },
+    "react-firebase-hooks/database": {
+      "src": "../../node_modules/react-firebase-hooks/database/dist/index.esm.js",
+      "file": "react-firebase-hooks_database.js",
+      "fileHash": "3d72196b",
+      "needsInterop": false
+    },
+    "firebase/auth": {
+      "src": "../../node_modules/firebase/auth/dist/esm/index.esm.js",
+      "file": "firebase_auth.js",
+      "fileHash": "3eb30d09",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-V35ZLCM6": {
+      "file": "chunk-V35ZLCM6.js"
+    },
+    "chunk-3NMHEJQR": {
+      "file": "chunk-3NMHEJQR.js"
+    },
+    "chunk-LISTFJ4E": {
+      "file": "chunk-LISTFJ4E.js"
+    },
+    "chunk-LDRPY47F": {
+      "file": "chunk-LDRPY47F.js"
+    },
+    "chunk-6VNTKNBR": {
+      "file": "chunk-6VNTKNBR.js"
+    },
+    "chunk-JMVEG3FK": {
+      "file": "chunk-JMVEG3FK.js"
+    },
+    "chunk-DD3W37AN": {
+      "file": "chunk-DD3W37AN.js"
+    },
+    "chunk-YKHSRMTK": {
+      "file": "chunk-YKHSRMTK.js"
+    },
+    "chunk-E2S4CAAM": {
+      "file": "chunk-E2S4CAAM.js"
+    },
+    "chunk-FZCGKE62": {
+      "file": "chunk-FZCGKE62.js"
+    },
+    "chunk-TWJRYSII": {
+      "file": "chunk-TWJRYSII.js"
+    },
+    "chunk-DC5AMYBS": {
+      "file": "chunk-DC5AMYBS.js"
+    }
+  }
+}
