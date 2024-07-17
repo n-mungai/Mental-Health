@@ -41,27 +41,25 @@ int main() {
 
 const BlogDetails = () => {
   const [text, setText] = useState("");
-  const [title, setTitle] = useState("");
-  const [author, setAuthor] = useState("");
+  var title = "";
+  var author = "";
 
   const { blogId } = useParams();
 
   const [snapshot] = useObject(ref(database, `blogs/${blogId}`));
   const [url, _, error] = useDownloadURL(storageRef(storage, `${blogId}.md`));
-  useEffect(() => {
-    if (!error && url) {
-      fetch(url)
-        .then((response) => response.text())
-        .then((data) => setText(data));
-    }
+  if (!error && url) {
+    fetch(url)
+      .then((response) => response.text())
+      .then((data) => setText(data));
+  }
 
-    if (snapshot) {
-      if (snapshot.exists()) {
-        setTitle(snapshot.val()["title"]);
-        setAuthor(snapshot.val()["author"]);
-      }
+  if (snapshot) {
+    if (snapshot.exists()) {
+      title = snapshot.val()["title"];
+      author = snapshot.val()["author"];
     }
-  });
+  }
 
   return (
     <div className="posts-page">

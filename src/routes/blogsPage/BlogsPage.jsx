@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import './BlogsPage.css';
 import { HashLink } from 'react-router-hash-link';
 
