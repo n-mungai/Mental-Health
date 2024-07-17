@@ -5,7 +5,7 @@ import LandingPage from './routes/landingPage/LandingPage'
 import Footer from './routes/Footer'
 import BlogsPage from './routes/blogsPage/BlogsPage'
 import ExpertsPage from './routes/expertsPage/ExpertsPage'
-import UserPage from './routes/userPage/UserPage'
+import UploadBlogPage from './routes/uploadBlogPage/UploadBlogPage'
 
 const router = createBrowserRouter([
   {
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       },
       {
         path: "user",
-        element: <UserPage />
+        element: <UploadBlogPage />
       }
     ]
   },
