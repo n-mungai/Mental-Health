@@ -98,8 +98,8 @@ const Header = () => {
                         {
                             (user == null) ?
                                 <>
-                                    <input type="text" id="email" value={email} onChange={e => { setEmail(e.target.value); }}></input>
-                                    <input type="password" id="password" value={password} onChange={e => { setPassword(e.target.value); }}></input>
+                                    <input type="text" id="email" value={email} onChange={e => { setEmail(e.target.value); }} placeholder="Email"></input>
+                                    <input type="password" id="password" value={password} onChange={e => { setPassword(e.target.value); }} placeholder="Password"></input>
                                     <button onClick={signIn}>Sign In</button>
                                     <button onClick={createUser}>Create New Account</button>
                                 </> :
