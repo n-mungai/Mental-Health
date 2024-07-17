@@ -13,33 +13,47 @@ const database = getDatabase();
 
 const BlogCard = ({ blogId, title, desc, author }) => {
     return (
-        <HashLink to={`/blogs/${blogId}`} className='blogCard'>
-            <h3>{title}</h3>
-            <p>{author}</p>
-            <pre>{desc}</pre>
-        </HashLink>
+        <div className="blogCard">
+            <HashLink to={`/blogs/${blogId}`}>
+                <h3>{title}</h3>
+                <p>{author}</p>
+                <pre>{desc}</pre>
+            </HashLink>
+        </div>
     )
 }
 
 const UserPage = () => {
-    const {userId} = useParams();
+    const { userId } = useParams();
 
-    // var blogList = [];
+    var userBlogs = [];
 
-    // const [snapshot, loading, error] = useObject(ref(database, `users/${userId}/blogs`));
+    const [blogsSnapshot] = useObject(ref(database, `users/${userId}`));
 
-    // if (!loading && snapshot.exists()) {
-    //     const data = snapshot.val();
-    //     const blogIds = [];
+    if (blogsSnapshot) {
+        if (blogsSnapshot.exists()) {
+            userBlogs = blogsSnapshot.val();
+        }
+    }
 
-    //     const array = [];
-    //     for (var key in data) {
-    //         array.push(
-    //             <BlogCard key={key} blogId={key} title={data[key].title} desc={data[key].desc} author={data[key].author} />
-    //         )
-    //     }
-    //     blogList = array;
-    // }
+    const blogsList = [];
+
+
+    const [allBlogs] = useObject(ref(database, "blogs"));
+
+    if (allBlogs) {
+        if (allBlogs.exists()) {
+            var data = allBlogs.val();
+            for (let key in data) {
+                if (userBlogs.includes(key)) {
+                    blogsList.push(
+                        <BlogCard key={key} blogId={key} title={data[key].title} author={data[key].author} desc={data[key].desc} />
+                    )
+                }
+            }
+        }
+    }
+
 
     return (
         <div className="page">
@@ -49,24 +63,7 @@ const UserPage = () => {
                     <HashLink className="write-blog" to={`/upload/${userId}`}>WRITE A BLOG</HashLink>
                 </div>
                 <div className="blog-posts">
-                    <div className="blog-post">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                            and scrambled it to make a type specimen book.</p>
-                        <span className="author">John Doe</span>
-                    </div>
-                    <div className="blog-post">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                            and scrambled it to make a type specimen book.</p>
-                        <span className="author">John Doe</span>
-                    </div>
-                    <div className="blog-post">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                            and scrambled it to make a type specimen book.</p>
-                        <span className="author">John Doe</span>
-                    </div>
+                    {blogsList}
                 </div>
             </div>
         </div>

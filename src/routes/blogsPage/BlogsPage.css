@@ -57,7 +57,7 @@ body {
 }
 
 
-.blogCard {
+#blogList .blogCard {
     width: 70vw;
     height: 25vh;
     margin: 48px 24px;
@@ -80,19 +80,19 @@ body {
     text-decoration: none;
 }
 
-.blogCard:hover {
+#blogList .blogCard:hover {
     scale: 1.02;
 }
 
-.blogCard h3 {
+#blogList .blogCard h3 {
     font-size: 2.5em;
 }
 
-.blogCard p {
+#blogList .blogCard p {
     color: color-mix(in srgb, var(--secondary-color) 50%, transparent);
     padding: 0.2em;
 }
 
-.blogCard pre {
+#blogList .blogCard pre {
     font-size: 1.1em;
 }

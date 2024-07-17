@@ -43,8 +43,46 @@
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#userPage .blog-post .author {
-    text-align: right;
-    font-size: 14px;
-    color: #555;
+#userPage .blogCard {
+    height: 20vh;
+    margin: 24px 24px;
+
+    /* border: 4px solid var(--secondary-color); */
+    border-radius: 16px;
+    overflow: hidden;
+
+    background-color: color-mix(in srgb, var(--background-color) 50%, transparent);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.15);
+
+    padding: 1em;
+
+    transition: all 0.35s ease-in-out;
+
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+#userPage .blogCard a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+#userPage .blogCard:hover {
+    scale: 1.02;
+}
+
+#userPage .blogCard h3 {
+    font-size: 2.5em;
+}
+
+#userPage .blogCard p {
+    color: color-mix(in srgb, var(--secondary-color) 50%, transparent);
+    padding: 0.2em;
+}
+
+#userPage .blogCard pre {
+    font-size: 1.1em;
 }
