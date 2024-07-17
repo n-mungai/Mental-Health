@@ -8,6 +8,7 @@ import ExpertsPage from './routes/expertsPage/ExpertsPage'
 import BlogDetails from './routes/blogDetailsPage/BlogDetails'
 import UserPage from './routes/userPage/UserPage'
 import UploadBlogPage from './routes/uploadBlogPage/UploadBlogPage'
+import {ErrorPage} from './routes/errorPage/ErrorPage'
 
 const router = createBrowserRouter([
   {
@@ -47,7 +48,8 @@ const router = createBrowserRouter([
         path: "upload/:userId",
         element: <UploadBlogPage />
       }
-    ]
+    ],
+    errorElement: <ErrorPage />
   },
 ])
 
