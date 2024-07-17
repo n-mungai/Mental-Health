@@ -1,0 +1,88 @@
+.page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+}
+
+#userPage {
+    width: 60%;
+    background-color: var(--background-color);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#userPage .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#userPage .header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+#userPage .write-blog {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+#userPage .blog-posts {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid var(--background-color);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#userPage .blogCard {
+    height: 20vh;
+    margin: 24px 24px;
+
+    /* border: 4px solid var(--secondary-color); */
+    border-radius: 16px;
+    overflow: hidden;
+
+    background-color: color-mix(in srgb, var(--background-color) 50%, transparent);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.15);
+
+    padding: 1em;
+
+    transition: all 0.35s ease-in-out;
+
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+#userPage .blogCard a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+#userPage .blogCard:hover {
+    scale: 1.02;
+}
+
+#userPage .blogCard h3 {
+    font-size: 2.5em;
+}
+
+#userPage .blogCard p {
+    color: color-mix(in srgb, var(--secondary-color) 50%, transparent);
+    padding: 0.2em;
+}
+
+#userPage .blogCard pre {
+    font-size: 1.1em;
+}
