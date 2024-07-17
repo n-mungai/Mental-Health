@@ -4,12 +4,17 @@ import { useParams } from "react-router-dom";
 
 import { app } from '../../firebase-options';
 import firebase from 'firebase/compat/app';
+import "firebase/compat/auth";
 import "firebase/compat/database";
+import { getAuth } from "firebase/auth";
 import { getDatabase, ref } from 'firebase/database';
 import { useObject } from "react-firebase-hooks/database";
 import { HashLink } from "react-router-hash-link";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { ErrorMsg } from "../errorPage/ErrorPage";
 
 const database = getDatabase();
+const auth = getAuth();
 
 const BlogCard = ({ blogId, title, desc, author }) => {
     return (
@@ -25,6 +30,8 @@ const BlogCard = ({ blogId, title, desc, author }) => {
 
 const UserPage = () => {
     const { userId } = useParams();
+
+    const [user] = useAuthState(auth);
 
     var userBlogs = [];
 
@@ -56,22 +63,32 @@ const UserPage = () => {
 
 
     return (
-        <div className="page">
-            <div id="userPage">
-                <div className="header">
-                    <h1>YOUR BLOGS</h1>
-                    <HashLink className="write-blog" to={`/upload/${userId}`}>WRITE A BLOG</HashLink>
-                </div>
-                <div className="blog-posts">
-                    {
-                        blogsList.length == 0 ?
-                        <p>You don't have any blogs yet...</p>
+        <>
+            {
+                !user ?
+                    <ErrorMsg />
+                    : (user.uid != userId) ?
+                        <ErrorMsg />
                         :
-                        blogsList
-                    }
-                </div>
-            </div>
-        </div>
+                        <div className="page">
+                            <div id="userPage">
+                                <div className="header">
+                                    <h1>YOUR BLOGS</h1>
+                                    <HashLink className="write-blog" to={`/upload/${userId}`}>WRITE A BLOG</HashLink>
+                                </div>
+                                <div className="blog-posts">
+                                    {
+                                        blogsList.length == 0 ?
+                                            <p>You don't have any blogs yet...</p>
+                                            :
+                                            blogsList
+                                    }
+                                </div>
+                            </div>
+                        </div>
+
+            }
+        </>
     );
 }
 
