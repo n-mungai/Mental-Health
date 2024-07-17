@@ -4,7 +4,7 @@ import { HashLink } from 'react-router-hash-link';
 import { app } from '../../firebase-options';
 import firebase from 'firebase/compat/app';
 import "firebase/compat/database";
-import { get, getDatabase, ref } from 'firebase/database';
+import { getDatabase, ref } from 'firebase/database';
 import { useObject } from "react-firebase-hooks/database";
 
 const database = getDatabase();
