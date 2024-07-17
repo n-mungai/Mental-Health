@@ -1,0 +1,40 @@
+.titleContainer {
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary-color);
+}
+
+.titleContainer>#title {
+    color: var(--background-color);
+    font-size: 7em;
+    font-style: normal;
+    font-weight: 400;
+    padding: 0.2em;
+}
+
+.titleContainer>#author {
+    color: var(--secondary-color);
+    font-size: 1.75em;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 0;
+}
+
+.posts-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.posts {
+    width: 80%;
+}
+
+.posts * {
+    all: revert;
+    font-size: 1.2em;
+}

@@ -5,7 +5,7 @@ import LandingPage from './routes/landingPage/LandingPage'
 import Footer from './routes/Footer'
 import BlogsPage from './routes/blogsPage/BlogsPage'
 import ExpertsPage from './routes/expertsPage/ExpertsPage'
-import UploadBlogPage from './routes/uploadBlogPage/UploadBlogPage'
+import BlogDetails from './routes/blogDetailsPage/BlogDetails'
 
 const router = createBrowserRouter([
   {
@@ -22,7 +22,16 @@ const router = createBrowserRouter([
       },
       {
         path: "blogs",
-        element: <BlogsPage />
+        children: [
+          {
+            path: "",
+            element: <BlogsPage />,
+          },
+          {
+            path: ":blogId",
+            element: <BlogDetails />
+          }
+        ]
       },
       {
         path: "experts",
@@ -31,7 +40,7 @@ const router = createBrowserRouter([
       {
         path: "user",
         element: <UploadBlogPage />
-      }
+      },
     ]
   },
 ])
@@ -42,4 +51,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
