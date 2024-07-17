@@ -22,8 +22,11 @@ const router = createBrowserRouter([
       },
       {
         path: "blogs",
-        element: <BlogsPage />,
         children: [
+          {
+            path: "",
+            element: <BlogsPage />,
+          },
           {
             path: ":blogId",
             element: <BlogDetails />
@@ -34,10 +37,6 @@ const router = createBrowserRouter([
         path: "experts",
         element: <ExpertsPage />
       },
-      {
-        path: "blogDetails",
-        element: <BlogDetails />
-      }
     ]
   },
 ])

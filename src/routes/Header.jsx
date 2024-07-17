@@ -18,7 +18,6 @@ const database = firebase.database();
 
 const Header = () => {
     const [scrollStyle, setScrollStyle] = useState("");
-    const [home, setHome] = useState("");
     const [hidden, setHidden] = useState(true);
 
     const [email, setEmail] = useState("");
@@ -30,10 +29,8 @@ const Header = () => {
     document.addEventListener('scroll', () => {
         if (window.scrollY >= window.innerHeight / 2) {
             setScrollStyle("scrolled");
-            setHome("Tulia");
         } else {
             setScrollStyle("");
-            setHome("");
         }
     });
 
@@ -81,10 +78,9 @@ const Header = () => {
     return (
         <nav id="myNav" className={scrollStyle}>
             <div className="home">
-                <HashLink to="/#landingPage">{home}</HashLink>
+                <HashLink to="/#landingPage">Tulia</HashLink>
             </div>
             <div className="content">
-                <HashLink to="blogDetails">BLOG DETAILS</HashLink>
                 <HashLink to="blogs">BLOG POSTS</HashLink>
                 <HashLink to="experts">SEE EXPERTS</HashLink>
             </div>

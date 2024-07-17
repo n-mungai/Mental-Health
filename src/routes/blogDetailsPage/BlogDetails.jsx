@@ -3,10 +3,17 @@ import './BlogDetails.css';
 
 import { app } from '../../firebase-options';
 import firebase from "firebase/compat/app";
+import "firebase/compat/database";
+import { getDatabase, ref } from "firebase/database";
+import { ref as storageRef } from "firebase/storage";
 import "firebase/compat/storage";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { useDownloadURL } from "react-firebase-hooks/storage";
+import { useObject } from "react-firebase-hooks/database";
 
 const storage = firebase.storage(app);
+const database = getDatabase();
 
 const file = `
 # Mental Health Awareness Application
@@ -32,21 +39,29 @@ int main() {
 \`\`\`
 `;
 
-const BlogDetails = ({ url = "", title = "Title", author = "Mohamed Junaid Chaudhry" }) => {
+const BlogDetails = () => {
   const [text, setText] = useState("");
+  const [title, setTitle] = useState("");
+  const [author, setAuthor] = useState("");
 
+  const { blogId } = useParams();
+
+  const [snapshot] = useObject(ref(database, `blogs/${blogId}`));
+  const [url, _, error] = useDownloadURL(storageRef(storage, `${blogId}.md`));
   useEffect(() => {
-    setText(file);  // Change to url
-    // const ref = storage.ref('README.md');
-    // ref.getDownloadURL().then((url) => {
-    //   fetch(url)
-    //     .then((response) => response.text())
-    //     .then((text) => {
-    //       setText(text);
-    //       console.log(text);
-    //     });
-    // })
-  })
+    if (!error && url) {
+      fetch(url)
+        .then((response) => response.text())
+        .then((data) => setText(data));
+    }
+
+    if (snapshot) {
+      if (snapshot.exists()) {
+        setTitle(snapshot.val()["title"]);
+        setAuthor(snapshot.val()["author"]);
+      }
+    }
+  });
 
   return (
     <div className="posts-page">

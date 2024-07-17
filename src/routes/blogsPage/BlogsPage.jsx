@@ -12,7 +12,7 @@ const database = getDatabase();
 
 const BlogCard = ({ blogId, title, desc, author }) => {
     return (
-        <HashLink to={`${blogId}`} className='blogCard'>
+        <HashLink to={`/blogs/${blogId}`} className='blogCard'>
             <h3>{title}</h3>
             <p>{author}</p>
             <pre>{desc}</pre>
@@ -25,10 +25,8 @@ const BlogsPage = () => {
 
     const [snapshot, loading, error] = useObject(ref(database, "blogs"));
 
-    console.log(loading);
     if (!loading && snapshot.exists()) {
         const data = snapshot.val();
-        console.log(data);
         const array = [];
         for (var key in data) {
             array.push(
