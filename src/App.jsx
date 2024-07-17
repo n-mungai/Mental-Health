@@ -37,6 +37,10 @@ const router = createBrowserRouter([
         path: "experts",
         element: <ExpertsPage />
       },
+      {
+        path: "user",
+        element: <UploadBlogPage />
+      },
     ]
   },
 ])
@@ -47,4 +51,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
