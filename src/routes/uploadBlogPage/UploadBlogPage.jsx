@@ -33,7 +33,7 @@ const UploadBlogPage = () => {
                 <p id="blogsTitle">ADD YOUR BLOG</p>
                 <p id="catchphrase">Share Your Thoughts and Experiences</p>
             </div>
-            <div id="main">
+            <div id="uploadContent">
                 <div className="addBlogContainer">
                     <input type="file" onChange={handleFileChange} />
                     <p>{newBlogFile}</p>
