@@ -29,12 +29,17 @@ const BlogCard = ({ blogId, title, desc, author }) => {
 }
 
 const UserPage = () => {
+    // User ID is retrived from react router ID
     const { userId } = useParams();
 
+    // Get the currently logged in user
     const [user] = useAuthState(auth);
 
+    /** Used to store the blog IDs related to the currently logged in user */
     var userBlogs = [];
 
+    // Load the user's blogs
+    // ==========================================
     const [blogsSnapshot] = useObject(ref(database, `users/${userId}`));
 
     if (blogsSnapshot) {
@@ -42,10 +47,13 @@ const UserPage = () => {
             userBlogs = blogsSnapshot.val();
         }
     }
+    // ==========================================
 
+    /** List of react components to show the blogs */
     const blogsList = [];
 
-
+    // Load the blog details (title, author, description)
+    // ==========================================================
     const [allBlogs] = useObject(ref(database, "blogs"));
 
     if (allBlogs) {
@@ -60,11 +68,12 @@ const UserPage = () => {
             }
         }
     }
-
+    // ==========================================================
 
     return (
         <>
             {
+                // If the user is logged out or the url ID doesn't match, show the error screen
                 !user ?
                     <ErrorMsg />
                     : (user.uid != userId) ?

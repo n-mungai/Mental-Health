@@ -6,26 +6,31 @@ import './Header.css';
 import accountLight from "../assets/header/account-light.png";
 import accountDark from "../assets/header/account-dark.png";
 
-import '../firebase-options';
+import { app } from "../firebase-options";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
-import "firebase/compat/database";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { ref, update } from "firebase/database";
 
 const auth = firebase.auth();
-const database = firebase.database();
 
 const Header = () => {
+    // Controls the scroll css for the nav bar
     const [scrollStyle, setScrollStyle] = useState("");
+
+    // Controls whether the account box is shown or not
     const [hidden, setHidden] = useState(true);
 
+    // Email and password fields for the account box
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    // Get the currently logged in user.
     const [user] = useAuthState(auth);
 
+    /** Used to hide/show the account sign in/out box */
     const updateAccountBox = () => { setHidden(!hidden); }
 
+    // Used to set the nav bar css when scrolled
     document.addEventListener('scroll', () => {
         if (window.scrollY >= window.innerHeight / 2) {
             setScrollStyle("scrolled");
@@ -34,6 +39,7 @@ const Header = () => {
         }
     });
 
+    /** Used to sign in a user in firebase */
     const signIn = () => {
         auth.signInWithEmailAndPassword(email, password).catch(function (error) {
             // Handle Errors here.
@@ -50,7 +56,7 @@ const Header = () => {
         });
     }
 
-
+    /** Used to create a new user in firebase */
     const createUser = () => {
         auth.createUserWithEmailAndPassword(email, password).catch(function (error) {
             // Handle Errors here.
@@ -69,6 +75,7 @@ const Header = () => {
         })
     }
 
+    /** Used to sign out the user from firebase */
     const signOut = () => {
         auth.signOut();
         setHidden(true);

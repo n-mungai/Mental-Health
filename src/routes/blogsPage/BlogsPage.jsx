@@ -9,6 +9,7 @@ import { useObject } from "react-firebase-hooks/database";
 
 const database = getDatabase();
 
+/** Card used to show the details of a blog post */
 const BlogCard = ({ blogId, title, desc, author }) => {
     return (
         <HashLink to={`/blogs/${blogId}`} className='blogCard'>
@@ -22,18 +23,19 @@ const BlogCard = ({ blogId, title, desc, author }) => {
 const BlogsPage = () => {
     var blogList = [];
 
+    // Load all available blogs from firebase and construct the blog cards
+    // =======================================================================
     const [snapshot, loading, error] = useObject(ref(database, "blogs"));
 
     if (!loading && snapshot.exists()) {
         const data = snapshot.val();
-        const array = [];
         for (var key in data) {
-            array.push(
+            blogList.push(
                 <BlogCard key={key} blogId={key} title={data[key].title} desc={data[key].desc} author={data[key].author} />
             )
         }
-        blogList = array;
     }
+    // =======================================================================
 
     return (
         <>
