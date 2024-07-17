@@ -63,7 +63,12 @@ const UserPage = () => {
                     <HashLink className="write-blog" to={`/upload/${userId}`}>WRITE A BLOG</HashLink>
                 </div>
                 <div className="blog-posts">
-                    {blogsList}
+                    {
+                        blogsList.length == 0 ?
+                        <p>You don't have any blogs yet...</p>
+                        :
+                        blogsList
+                    }
                 </div>
             </div>
         </div>

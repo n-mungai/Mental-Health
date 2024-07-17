@@ -102,3 +102,15 @@
 #account-box.hidden {
     display: none;
 }
+
+#account-box a {
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    padding: 0;
+    height: auto;
+    margin: 0 0 0.5em 0;
+
+    border-radius: 12px;
+}

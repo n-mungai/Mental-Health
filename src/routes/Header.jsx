@@ -97,6 +97,7 @@ const Header = () => {
                                     <button onClick={createUser}>Create New Account</button>
                                 </> :
                                 <>
+                                    <HashLink to={`/user/${user.uid}`} onClick={() => setHidden(true)}>Go To Profile</HashLink>
                                     <button onClick={signOut}>Sign out</button>
                                 </>
 
